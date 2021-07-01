@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('./includes/head.ejs') %>
+	<body>
+		<main>
+			<form id="login" method="POST" action="/login">
+				<label for="email">Email</label><br />
+				<input
+					type="email"
+					id="email"
+					name="email"
+					placeholder="Your email goes here..."
+					required
+					autofocus
+				/><br />
+				<label for="password">Password</label><br />
+				<input
+					type="password"
+					id="password"
+					name="password"
+					placeholder="Your password goes here..."
+					required
+				/><br />
+				<button type="submit">Login</button><br />
+				<p>Not yet registered? <a href="/">Register</a></p>
+			</form>
+		</main>
+	</body>
+</html>

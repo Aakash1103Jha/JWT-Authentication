@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('./includes/head.ejs') %>
+	<body>
+		<main>
+			<form id="register" method="POST" action="/register">
+				<label for="firstName">First Name</label><br />
+				<input
+					type="text"
+					id="firstName"
+					name="firstName"
+					placeholder="First Name"
+					required
+					autofocus
+				/><br />
+				<label for="lastName">Last Name</label><br />
+				<input
+					type="text"
+					id="lastName"
+					name="lastName"
+					placeholder="Last Name"
+					required
+				/><br />
+				<label for="email">Email</label><br />
+				<input
+					type="email"
+					id="email"
+					name="email"
+					placeholder="Your email goes here..."
+					required
+				/><br />
+				<label for="password">Password</label><br />
+				<input
+					type="password"
+					id="password"
+					name="password"
+					placeholder="Your password goes here..."
+					required
+				/><br />
+				<button type="submit">Register</button><br />
+				<p>Already registered? <a href="/login">Login</a></p>
+			</form>
+		</main>
+	</body>
+</html>
