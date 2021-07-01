@@ -16,6 +16,7 @@ body {
 		height: 100vh;
 
 		// for login.ejs
+		// for register.ejs
 		#login,
 		#register {
 			background: #ffffff;
@@ -23,6 +24,8 @@ body {
 			height: fit-content;
 			width: 30rem;
 			border-radius: 0.5rem;
+			border: solid transparent 1px;
+			box-shadow: 0px 0px 10px rgb(50, 51, 48, 0.2);
 
 			input {
 				padding: 0.7rem 1rem;
@@ -42,9 +45,55 @@ body {
 				width: 8rem;
 			}
 
+			button:hover,
+			button:focus,
+			button:active {
+				font-weight: bold;
+				background: green;
+				color: #f4f4f4;
+				transition: all 0.5s ease-in-out;
+			}
+
 			p {
 				text-align: center;
 			}
+			#error {
+				color: red;
+				font-weight: bold;
+			}
+		}
+	}
+	// for navbar.ejs
+	#navbar {
+		background: #323330;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100vw;
+		height: 4rem;
+		padding: 0rem 6rem;
+
+		p {
+			color: #f4f4f4;
+			font-size: 20px;
+			flex: 15;
+		}
+
+		a {
+			text-align: center;
+			flex: 1;
+			color: #f4f4f4;
+			text-decoration: none;
+			border: #f4f4f4 solid 0.5px;
+			padding: 0.7rem 2rem;
+			border-radius: 0.5rem;
+		}
+		a:hover,
+		a:focus,
+		a:active {
+			background: red;
+			border: red solid 0.5px;
+			transition: all 0.5s ease-in-out;
 		}
 	}
 }

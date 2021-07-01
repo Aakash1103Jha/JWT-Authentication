@@ -23,6 +23,8 @@ body main #register {
   height: fit-content;
   width: 30rem;
   border-radius: 0.5rem;
+  border: solid transparent 1px;
+  box-shadow: 0px 0px 10px rgba(50, 51, 48, 0.2);
 }
 body main #login input,
 body main #register input {
@@ -42,9 +44,55 @@ body main #register button {
   border-radius: 0.4rem;
   width: 8rem;
 }
+body main #login button:hover,
+body main #login button:focus,
+body main #login button:active,
+body main #register button:hover,
+body main #register button:focus,
+body main #register button:active {
+  font-weight: bold;
+  background: green;
+  color: #f4f4f4;
+  transition: all 0.5s ease-in-out;
+}
 body main #login p,
 body main #register p {
   text-align: center;
+}
+body main #login #error,
+body main #register #error {
+  color: red;
+  font-weight: bold;
+}
+body #navbar {
+  background: #323330;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 4rem;
+  padding: 0rem 6rem;
+}
+body #navbar p {
+  color: #f4f4f4;
+  font-size: 20px;
+  flex: 15;
+}
+body #navbar a {
+  text-align: center;
+  flex: 1;
+  color: #f4f4f4;
+  text-decoration: none;
+  border: #f4f4f4 solid 0.5px;
+  padding: 0.7rem 2rem;
+  border-radius: 0.5rem;
+}
+body #navbar a:hover,
+body #navbar a:focus,
+body #navbar a:active {
+  background: red;
+  border: red solid 0.5px;
+  transition: all 0.5s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

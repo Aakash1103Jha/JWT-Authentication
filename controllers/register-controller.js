@@ -13,12 +13,15 @@ exports.getRegister = async (req, res, next) => {
 exports.postRegister = async (req, res, next) => {
 	// check for data
 	if (!req.body) {
-		return res.send('Something went wrong')
+		return res.status(404).render('error', { title: 'Error', error: '404: Page not found' })
 	}
 	// check if user already exists
 	let existingUser = await UserModel.findOne({ email: req.body.email })
 	if (existingUser) {
-		return res.redirect(400, '/register')
+		return res.status(400).render('error', {
+			title: 'Error',
+			error: `User already exists with this email ${req.body.email}`,
+		})
 	}
 	// hash password
 	const salt = await bcrypt.genSalt(10)

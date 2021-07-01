@@ -4,7 +4,8 @@
 	<body>
 		<main>
 			<form id="register" method="POST" action="/register">
-				<label for="firstName">First Name</label><br />
+				<label for="firstName">First Name<span id="error"> *</span></label
+				><br />
 				<input
 					type="text"
 					id="firstName"
@@ -13,7 +14,8 @@
 					required
 					autofocus
 				/><br />
-				<label for="lastName">Last Name</label><br />
+				<label for="lastName">Last Name<span id="error"> *</span></label
+				><br />
 				<input
 					type="text"
 					id="lastName"
@@ -21,7 +23,8 @@
 					placeholder="Last Name"
 					required
 				/><br />
-				<label for="email">Email</label><br />
+				<label for="email">Email<span id="error"> *</span></label
+				><br />
 				<input
 					type="email"
 					id="email"
@@ -29,7 +32,8 @@
 					placeholder="Your email goes here..."
 					required
 				/><br />
-				<label for="password">Password</label><br />
+				<label for="password">Password<span id="error"> *</span></label
+				><br />
 				<input
 					type="password"
 					id="password"
